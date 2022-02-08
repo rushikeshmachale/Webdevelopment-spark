@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Hello, world!</title>
+  </head>
+<style>
+   body{
+    background-color: #ffffff;
+
+       } 
+  .block{
+    min-height:100% ;
+    width: 100%;
+
+  }
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+  a{
+   transition: transform 1s;  
+  }
+  a:hover{
+  transform: scale(1.1); 
+color: white;
+}
+i{
+transition: transform 1s;   
+}
+i:hover{
+box-shadow: 0px 5px rgb(255,255,255,0.5);
+transform: scale(1.3); 
+  color: white;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+input{
+  outline: none;
+  background-color: black;
+  width: 50%;
+  color: white;
+ padding: 5px 20px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input:focus{
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+  
+</style>
+
+<body >
+  <div >
+<nav class="navbar navbar-expand-lg bg-dark mb-5" style="background-color: rgb(0,0,0,0.6);">
+  
+  <a class="navbar-brand" href="index.html">
+    Spark Bank</a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+    
+ <span class="fa-stack fa-lg ml-2 mr-2">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-bitcoin fa-stack-1x fa-inverse"></i>
+</span>
+
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" style="color: white">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item  mr-md-5 ml-5">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item mr-md-5 ml-5">
+        <a class="nav-link" href="view.html"><div >Customers</div></a>
+      </li>
+      <li class="nav-item mr-md-5 ml-5">
+        <a class="nav-link" href="create.html"><div style="color: white;">Create Customer</div></a>
+      </li>
+      <li class="nav-item mr-md-5 ml-5">
+        <a class="nav-link" href="history.html">History</a>
+      </li>
+     
+      </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+<div class="row">
+ <div class="col-sm-2"></div>
+  <div class="col-sm-8" style="background-color: rgb(255,250,250)">
+  	
+  <div class="row">
+  <div class="col-md-7 " style="color: white ; background-color: black ; text-align: center;">
+  	<div class="row" style="background-color:#32CD32; color:#006400 ; font-size: 120%"><div class="mx-auto"id="complete"></div></div>
+  	<br>
+  	<h3 class="mb-4">Create Your Account</h3>
+  	 <input type="text" id="name" placeholder="User Name"  />
+<br><br>
+ <input type="number" id="account" placeholder="Account Number" />
+<br><br>
+ <input type="text" id="iD" placeholder="Email ID" />
+<br><br>
+<input type="text" id="city" placeholder="City">
+<br><br>
+
+ <input type="text" id="phone" placeholder="Phone Number">
+<br>
+<br>
+<input type="number" id="amount" placeholder="Balance">
+<br><br>
+<button class="btn btn-light" id="insert">CREATE</button>
+<br><br>
+  	
+  </div>
+ 
+  <div class="col-md-5 d-md-block d-none"><img src="./image/card.png" class="img-fluid mt-5"></div>
+
+  </div>	
+  </div>
+   <div class="col-sm-2"></div>
+</div>
+</div>
+
+
+<footer class="bg-dark text-center text-lg-start mt-5" style="color: white">
+
+  <!-- Copyright -->
+  <div class="text-center p-3">
+    © Feb'22  Copyright:
+    <a class="text-light" href="#">Spark Bank</a>
+  </div>
+  <!-- Copyright -->
+</footer> 
+
+
+</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+ <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>  
+
+
+<script id="MainScript">
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyBm2_yFcMAsyOpWFAVN8ic9nGHIYlC0QLE",
+    authDomain: "bankofmars-689ca.firebaseapp.com",
+    projectId: "bankofmars-689ca",
+    storageBucket: "bankofmars-689ca.appspot.com",
+    messagingSenderId: "606412858231",
+    appId: "1:606412858231:web:5f83c690d3b6d4d568f772"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+var nameV,accountV,emailV,cityV,phoneV,amountV;
+
+function Ready(){
+nameV= document.getElementById('name').value;	
+accountV= document.getElementById('account').value;
+emailV= document.getElementById('iD').value;
+cityV =document.getElementById('city').value;
+phoneV= document.getElementById('phone').value;
+amountV=document.getElementById('amount').value;
+if(nameV===""||accountV===""||emailV===""||cityV===""||phoneV===""||amountV==="")
+{
+alert("Enter all details  Click ok to renter your details");
+location.reload();
+}
+}
+
+
+document.getElementById('insert').onclick = function(){
+Ready();
+
+firebase.database().ref('bank/'+accountV).set({
+Nameofcustomer : nameV,
+accountNo : accountV,
+Emailid : emailV,
+city : cityV,
+phoneNO : phoneV,
+Amount: amountV
+});
+document.getElementById('complete').innerHTML=`${nameV} your account have been created`;
+document.getElementById('name').value="";	
+document.getElementById('account').value="";
+document.getElementById('iD').value="";
+document.getElementById('city').value="";
+document.getElementById('phone').value="";
+document.getElementById('amount').value="";
+}
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Hello, world!</title>
+  </head>
+<style>
+   body{
+background-color: #060606;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23030303'/%3E%3Cstop offset='1' stop-color='%23060606'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23837c74' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23837c74' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+}
+
+  .block{
+    min-height:100% ;
+    width: 100%;
+
+  }
+  a{
+   transition: transform 1s;  
+  }
+  a:hover{
+  transform: scale(1.1); 
+color: white;
+}
+i{
+transition: transform 1s;   
+}
+i:hover{
+box-shadow: 0px 5px rgb(255,255,255,0.5);
+transform: scale(1.3); 
+  color: white;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 70%;
+  color: white;
+  }
+@media only screen and (max-width: 600px) {
+ #customers{
+  width:90%;
+ }
+
+}
+
+#customers td, #customers th {
+  text-align: center;
+  
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: rgb(255,255,255,0.2);}
+
+#customers tr:hover {background-color: rgb(255,255,255);
+color: black;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(255,255,255,0.5);
+  text-align: center;
+  color: white;
+}
+
+.displayblock{
+  display: block;
+}
+
+.displaynone{
+  display: none;
+}
+
+select{
+  width:80%;
+  max-width: 500px;
+}
+
+</style>
+
+<body >
+  <div >
+
+<nav class="navbar navbar-expand-lg " style="background-color: rgb(0,0,0,0.6);">
+  
+  <a class="navbar-brand" href="index.html">
+    Spark Bank</a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+    
+ <span class="fa-stack fa-lg ml-2 mr-2">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-bitcoin fa-stack-1x fa-inverse"></i>
+</span>
+
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" style="color: white">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item  mr-md-5 ml-5">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item mr-md-5 ml-5">
+        <a class="nav-link" href="view.html"><div style="color: white;">Customers</div></a>
+      </li>
+      <li class="nav-item mr-md-5 ml-5">
+        <a class="nav-link" href="create.html">Create Customer</a>
+      </li>
+      <li class="nav-item mr-md-5 ml-5">
+        <a class="nav-link" href="history.html">History</a>
+      </li>
+     
+      </ul>
+  </div>
+</nav>
+<br><br>
+ 
+<div id="up" class="displayblock">
+<table id="customers">
+<thead>
+  <tr style="background-color: white;">
+<th style="color: black">Sno</th>
+<th style="color: black">User Name</th>
+<th style="color: black" class="d-sm-block d-none">Email ID</th>
+<th style="color: black">Balance</th>  
+<th style="color: black">View</th>
+</tr>
+</thead>
+<tbody id="tbody1">
+  
+  </tbody>
+  
+</table>
+</div>
+
+<br><br>
+<div id="down" class="displaynone">
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-sm-1"></div>
+    <div class="col-md-5 col-md-1">
+<div style="background-color:#32CD32;color:#006400 ; padding-left: 10px ; padding-right:10px; "><div id="complete"></div></div>
+      <div class="card mt-0 bg-light">
+  <div class="card-body">  
+    <h5 class="card-title">&nbsp;   &nbsp;&nbsp;<span class="text-center"id="name"></span> </h5>
+    <div> &nbsp;   &nbsp;&nbsp; Account Number  - &nbsp;   &nbsp;&nbsp;<span id="account"></span> </div>
+     <div>&nbsp;   &nbsp;&nbsp; Email id  -&nbsp;   &nbsp;&nbsp;<span id="iD"></span> </div>
+     <div>&nbsp;   &nbsp;&nbsp; City  -&nbsp;   &nbsp;&nbsp;<span id="city"></span> </div>
+     <div>&nbsp;   &nbsp;&nbsp; Phone Number  -&nbsp;   &nbsp;&nbsp;<span id="phone"></span>  </div> 
+       <div>&nbsp;   &nbsp;&nbsp; Balance  -&nbsp;   &nbsp; <span>&#8377;</span>&nbsp; <span id="amount"></span> </div>
+    
+      <br><br>
+       &nbsp;   &nbsp;&nbsp;
+        <select id="state" onchange="data2()"></select>
+
+     <br><br>
+      <div>&nbsp;   &nbsp;&nbsp;  Amount : <span>&#8377;</span>&nbsp;   &nbsp;&nbsp;<input type="number" id="amt"/></div>
+      <br/>
+      &nbsp;   &nbsp;&nbsp;<button class="btn btn-dark" onclick='transcat()'>Transcat</button> 
+      <a class="btn btn-dark float-right" href="view.html">View All Customer</a> 
+      <br><br>  
+
+    </div>
+  </div></div>
+    <div class="col-md-3 col-sm-1"></div>
+  </div>
+   
+ </div>
+<br><br>
+</div>
+
+<footer class="bg-dark text-center text-lg-start mt-5" style="color: white">
+
+  <div class="text-center p-3">
+    © Feb'22  Copyright:
+    <a class="text-light" href="#">Spark Bank</a>
+  </div>
+</footer> 
+
+
+</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script> 
+
+
+<script id="MainScript">
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyBm2_yFcMAsyOpWFAVN8ic9nGHIYlC0QLE",
+    authDomain: "bankofmars-689ca.firebaseapp.com",
+    projectId: "bankofmars-689ca",
+    storageBucket: "bankofmars-689ca.appspot.com",
+    messagingSenderId: "606412858231",
+    appId: "1:606412858231:web:5f83c690d3b6d4d568f772"
+  };
+  firebase.initializeApp(firebaseConfig);
+  function SelectAllData(){
+  firebase.database().ref('bank').once('value', 
+    function(AllRecord) {
+      AllRecord.forEach(
+      function(CurrentRecord){
+         var accountV = CurrentRecord.val().accountNo;
+         var nameV = CurrentRecord.val().Nameofcustomer;
+        var emailV = CurrentRecord.val().Emailid;
+         
+         var balanceV = CurrentRecord.val().Amount;
+          AddItemToTable(nameV,emailV,balanceV,accountV);
+     });
+    });
+    
+  }
+
+  window.onload = SelectAllData;
+  
+var stdNo=0;
+function AddItemToTable(nameV,emailV,balanceV,accountV){
+stdNo++;
+var tbody1=document.getElementById('tbody1');
+var state=document.getElementById('state');
+tbody1.innerHTML = tbody1.innerHTML + `<tr> <td> ${stdNo} </td>  <td> ${nameV} </td> 
+ <td class="d-sm-block d-none"> ${emailV} </td> <td> ${balanceV} </td> 
+ <td><button type="button"  class="btn btn-dark" onclick="sel('${accountV}')">View</button></tr>`;
+
+state.innerHTML = state.innerHTML+`<option value="${accountV}">&nbsp;   &nbsp;&nbsp; ${nameV}&nbsp;  
+ &nbsp;&nbsp; ( ${accountV} )</option>`;
+}
+
+
+
+
+
+
+var account,amount;
+var name1,name2,email1,email2,city1,city2,phone1,phone2;
+var amount1,amount2;
+var setvalue,amt;
+
+function sel(acc) {
+document.getElementById("up").className = "displaynone";
+document.getElementById("down").className = "displayblock";
+
+account = acc;
+firebase.database().ref('bank/'+acc).on('value', function(snapshot){
+ document.getElementById('name').innerHTML=snapshot.val().Nameofcustomer;
+  document.getElementById('account').innerHTML=snapshot.val().accountNo;
+  document.getElementById('iD').innerHTML=snapshot.val().Emailid;
+  document.getElementById('city').innerHTML=snapshot.val().city;
+  document.getElementById('phone').innerHTML=snapshot.val().phoneNO;
+  document.getElementById('amount').innerHTML=snapshot.val().Amount;
+  name1=snapshot.val().Nameofcustomer;
+  email1=snapshot.val().Emailid;
+  city1=snapshot.val().city;
+  phone1=snapshot.val().phoneNO;
+  amount1=snapshot.val().Amount;
+  amount=snapshot.val().Amount;
+});
+}
+
+
+
+
+function data2(){
+selvalue=document.getElementById('state').value;
+firebase.database().ref('bank/'+selvalue).on('value', function(snapshot){
+  name2=snapshot.val().Nameofcustomer;
+  email2=snapshot.val().Emailid;
+  city2=snapshot.val().city;
+  phone2=snapshot.val().phoneNO;
+  amount2=snapshot.val().Amount;
+
+});
+
+}
+
+
+function transcat(){
+ selvalue= document.getElementById('state').value;
+   amt = document.getElementById('amt').value;
+  console.log(selvalue);
+  console.log(account);
+console.log(name1 , email1 , city1 ,phone1 ,amount1 ,account);
+console.log(name2 , email2, city2 , phone2 ,amount2 , selvalue);
+
+if(amt===""||amount1<amt){
+   alert("Enter Valid Amount To Transcat");
+}
+
+else{
+ 
+console.log(selvalue);
+
+
+amount2=parseInt(amount2);
+amt=parseInt(amt);
+amount1=amount1-amt;
+amount2=amount2+amt;
+console.log("After");
+console.log(name1 , email1 , city1 ,phone1 ,amount1 ,account);
+console.log(name2 , email2, city2 , phone2 ,amount2 , selvalue);
+
+
+firebase.database().ref('bank/'+account).update({
+ Nameofcustomer : name1,
+ Emailid : email1,
+ city : city1,
+ phoneNO : phone1,
+ Amount: amount1
+ });
+
+
+firebase.database().ref('bank/'+selvalue).update({
+ Nameofcustomer : name2,
+ Emailid : email2,
+ city : city2,
+ phoneNO : phone2,
+ Amount: amount2
+ });
+
+document.getElementById('complete').innerHTML=`${name1} your transaction is successfully done 
+<a href="view.html" class="float-right"><i style="font-size:16px" class="fa">&#xf00d;</i></a>`;
+sel(account);
+
+}
+
+
+} 
+
+
+
+
+</script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <title>Hello, world!</title>
+  </head>
+<style>
+   body{
+  background-color:  white;    }
+  a{
+   transition: transform 1s;  
+  }
+  a:hover{
+  transform: scale(1.1); 
+  color: white;
+
+  }
+  
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 70%;
+  color: white;
+  }
+@media only screen and (max-width: 600px) {
+ #customers{
+  width:90%;
+ }
+
+}
+
+#customers td, #customers th {
+  text-align: center;
+  
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: rgb(0,0,0,0.8);}
+
+#customers tr:nth-child(odd){background-color: rgb(0,0,0,0.4);}
+
+#customers tr:hover {background-color: white;
+color: black;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(0,0,0,0.8);
+  text-align: center;
+  color:white;
+}
+
+
+</style>
+
+<body >
+  <div >
+<nav class="navbar navbar-expand-lg bg-dark" style="background-color: rgb(0,0,0,0.6);">
+  
+  <a class="navbar-brand" href="index.html">
+    <!-- <img class="ml-2 mr-3"src="./image/logo.png" width="35px" height="35px" /> -->
+    <strong>Spark Bank</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+   
+
+ <span class="fa-stack fa-lg ml-2 mr-2">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-bitcoin fa-stack-1x fa-inverse"></i>
+</span>
+  
+
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" style="color: white">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mr-md-5 ml-5">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item  mr-md-5 ml-5">
+        <a class="nav-link" href="view.html">Customers</a>
+      </li>
+      <li class="nav-item mr-md-5 ml-5">
+        <a class="nav-link" href="create.html">Create Customer</a>
+      </li>
+      <li class="nav-item mr-md-5 ml-5">
+        <a class="nav-link" href="history.html"><div style="color: white;">History</div></a>
+      </li>
+      
+      </ul>
+  </div>
+</nav>
+
+<br><br>
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-md-2 col-sm-1"> </div>
+ <div class="col-md-8 col-sm-10">
+<table id="customers">
+<thead>
+  <tr >
+<th >Sno</th>
+<th >Sender</th>
+<th >Receiver</th>  
+<th  class="d-sm-block d-none">Amount</th>
+<th >Time & Date</th>
+</tr>
+</thead>
+<tbody id="tbody1">
+  
+  </tbody>
+  
+</table>
+<div class="col-md-2 col-sm-1"></div>
+</div>
+</div> 
+
+
+<footer class="bg-dark text-center text-lg-start mt-5 fixed-bottom" style="color: white">
+
+  <!-- Copyright -->
+  <div class="text-center p-3">
+    © Feb'22  Copyright:
+    <a class="text-light" href="#">Spark Bank</a>
+  </div>
+  <!-- Copyright -->
+</footer> 
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script> 
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyCAfsAn1RWvLsU28hzUVSAHj4klf-oW5z8",
+    authDomain: "history-87c6c.firebaseapp.com",
+    projectId: "history-87c6c",
+    storageBucket: "history-87c6c.appspot.com",
+    messagingSenderId: "220752363443",
+    appId: "1:220752363443:web:2879b6645184628be855c6"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+
+  function SelectAllData(){
+  firebase.database().ref('history').once('value', 
+    function(AllRecord) {
+      AllRecord.forEach(
+      function(CurrentRecord){
+          var nameV = CurrentRecord.val().From;
+          var name1 = CurrentRecord.val().To;
+          var time = CurrentRecord.val().Time;
+         var balanceV = CurrentRecord.val().Amount;
+          AddItemToTable(nameV,name1,time,balanceV);
+     });
+    });
+    
+  }
+
+  window.onload = SelectAllData;
+  
+//-------------------------------------//
+var stdNo=0;
+function AddItemToTable(nameV,name1,time,balanceV){
+
+stdNo++;
+var tbody1=document.getElementById('tbody1');
+tbody1.innerHTML = tbody1.innerHTML + `<tr> <td> ${stdNo} </td> <td> ${nameV} </td> <td> ${name1} </td>  <td class="d-sm-block d-none"> ${balanceV} </td> <td>${time}</td></tr>`;
+
+}
+
+</script>
+
+</body></html>
